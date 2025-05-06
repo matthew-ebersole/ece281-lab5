@@ -75,8 +75,6 @@ begin
 	-- PROCESSES ----------------------------------------
 	
 	-- 2 Bit counter Process ----------------------------
-	-- counter rolls over automatically
-	-- asynchronous reset to "00"
 	twoBitCounter_proc : process(i_clk, i_reset)
 	begin
 		if i_reset = '1' then
@@ -90,7 +88,7 @@ begin
 
 	-- CONCURRENT STATEMENTS ----------------------------
 	
-	-- output MUXs
+    -- Mux for all the outputs
 	o_data <= i_D3 when f_sel = "11" else
 	
 			  i_D2 when f_sel = "10" else

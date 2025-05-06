@@ -91,7 +91,7 @@ begin
 			end if;
 		end if;
 	end process countClock_proc;
-	-----------------------------------------------------
+
 	
 end countCompare;
 

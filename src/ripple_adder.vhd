@@ -2,6 +2,8 @@
 -- Implements a 4-bit Ripple-Carry adder from instantiated Full Adders
 ----------------------------------------------------------------------------------
 
+-- All from previous labs
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -15,6 +17,7 @@ entity ripple_adder is
            );
 end ripple_adder;
 
+
 architecture Behavioral of ripple_adder is
     component full_adder is
         port (
@@ -25,7 +28,7 @@ architecture Behavioral of ripple_adder is
             Cout  : out std_logic
             );
         end component full_adder; 
-    signal w_carry  : STD_LOGIC_VECTOR(3 downto 0); -- for ripple between adders
+    signal w_carry  : STD_LOGIC_VECTOR(3 downto 0);
 begin
 -- PORT MAPS --------------------
     full_adder_0: full_adder

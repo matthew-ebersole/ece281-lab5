@@ -51,6 +51,8 @@ begin
     
     o_cycle <= f_q;
     
+    
+    -- process for controller
     register_proc : process (i_adv, i_reset)
     begin
     if i_reset = '1' then
